@@ -50,6 +50,10 @@ If you install [Node.js](http://nodejs.org) installation is easy:
     $ npm install -g jsbin
     $ jsbin
 
+Then pull in jor1k submodules for Linux/Vim:
+    
+    $ git submodule update --init
+
 Optionally point JS Bin to your config:
 
     $ JSBIN_CONFIG=~/config.local.json jsbin
