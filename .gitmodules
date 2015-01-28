@@ -1,0 +1,6 @@
+[submodule "public/jor1k"]
+	path = public/jor1k
+	url = https://github.com/emnh/jor1k
+[submodule "public/jor1k-sysroot"]
+	path = public/jor1k-sysroot
+	url = https://github.com/emnh/jor1k-sysroot
