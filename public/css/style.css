@@ -5959,3 +5959,8 @@ a[data-pro]:hover:after {
   text-decoration: none;
   vertical-align: middle;
 }
+
+#vim canvas#tty {
+  /*width: 100%;
+  height: 100%;*/
+}

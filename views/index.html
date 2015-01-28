@@ -119,6 +119,7 @@ if(top != self) {
                       <li><label><input name="panel" type="checkbox" value="html">HTML</label></li>
                       <li><label><input name="panel" type="checkbox" value="css">CSS</label></li>
                       <li><label><input name="panel" type="checkbox" value="js">JS</label></li>
+                      <li><label><input name="panel" type="checkbox" value="js">Vim</label></li>
                       <li><label><input name="panel" type="checkbox" value="console">Console</label></li>
                       <li><label><input name="panel" type="checkbox" value="output">Output</label></li>
                     </ul>
@@ -169,6 +170,7 @@ if(top != self) {
                     <li><label><input type="checkbox" data-panel="html">HTML</label></li>
                     <li><label><input type="checkbox" data-panel="css">CSS</label></li>
                     <li><label><input type="checkbox" data-panel="javascript">JS</label></li>
+                    <li><label><input type="checkbox" data-panel="vim">Vim</label></li>
                     <li><label><input type="checkbox" data-panel="console">Console</label></li>
                     <li><label><input type="checkbox" data-panel="live">Output</label></li>
                   </ul>
@@ -455,6 +457,22 @@ if(top != self) {
         <textarea aria-label="CSS Code Panel" spellcheck="false" autocapitalize="none" autocorrect="off" id="css"></textarea>
       </div>
     </div>
+
+    <div class="stretch vim panel">
+      <!--
+      <div class="label">
+        <span class="name"><strong>Vim</strong></span>
+      </div>
+      -->
+      <div id="vim" class="stretch">
+        <!--<canvas id="tty" class="screen" width="640" height="384">-->
+        <textarea style="height: 20px;" type=text cols="5" rows="1" id="clipboard">clipb</textarea>
+        <canvas id="tty" class="screen" width="800" height="768">
+            Terminal uses canvas
+        </canvas>
+      </div>
+    </div>
+ 
     <div class="stretch console panel">
       <div class="label">
         <span class="name"><strong>Console</strong></span>
@@ -662,6 +680,8 @@ window.jsbin = {{{jsbin}}};
 <script src="{{static}}/js/vendor/eventsource.js{{cacheBust}}"></script>
 <script src="{{static}}/js/spike.js{{cacheBust}}"></script>
 {{/if}}
+<script src="{{static}}/jor1k/bin/jor1k-master-min.js"></script>
+<script src="{{static}}/js/jor1k.js"></script>
 </body>
 </html>
 

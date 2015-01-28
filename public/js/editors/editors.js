@@ -86,7 +86,7 @@ function getQuery(qs) {
 }
 
 function stringAsPanelsToOpen(query) {
-  var validPanels = ['live', 'javascript', 'html', 'css', 'console'];
+  var validPanels = ['live', 'javascript', 'vim', 'html', 'css', 'console'];
 
   return query.split(',').reduce(function (toopen, key) {
     if (key === 'js') {
@@ -130,7 +130,7 @@ panels.restore = function () {
       width = $window.width(),
       deferredCodeInsert = '',
       focused = !!store.sessionStorage.getItem('panel'),
-      validPanels = 'live javascript html css console'.split(' '),
+      validPanels = 'live javascript html vim css console'.split(' '),
       cachedHash = '';
 
   if (history.replaceState && (location.pathname.indexOf('/edit') !== -1) || ((location.origin + location.pathname) === jsbin.getURL() + '/')) {
@@ -509,6 +509,9 @@ var panelInit = {
   javascript: function () {
     return new Panel('javascript', { editor: true, label: 'JavaScript' });
   },
+  vim: function () {
+    return new Panel('vim', { label: 'Vim' });
+  },
   console: function () {
     // hide and show callbacks registered in console.js
     return new Panel('console', { label: 'Console' });
@@ -540,6 +543,7 @@ var editors = panels.panels = {};
 editors.html = panelInit.html();
 editors.css = panelInit.css();
 editors.javascript = panelInit.javascript();
+editors.vim = panelInit.vim();
 editors.console = panelInit.console();
 upgradeConsolePanel(editors.console);
 editors.live = panelInit.live();
